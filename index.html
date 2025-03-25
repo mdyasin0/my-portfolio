@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasin creation</title>
+    <!-- favicon -->
+     <link rel="shortcut icon" href="assets/fav.png" type="image/x-icon">
     <!-- fonawesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- google font cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!-- daisyui cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -25,20 +27,31 @@
 html {
   scroll-behavior: smooth;
 }
+.fleur {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.navbar {
+      transition: top 0.3s ease-in-out;
+    }
+
     </style>
 </head>
 <body class="bg-[#0F172A] text-[#F8FAFC] inter ">
     <!-- navbar -->
-     <nav class="flex justify-between px-32 py-4 sticky top-0 items-center">
-        <div class="font-black text-cyan-300 text-3xl">
-          Yc
+     <nav id="navbar" class="flex navbar z-10  bg-opacity-90  bg-black justify-between px-32 py-4 border-b border-[#38BDF8] sticky  top-0 items-center">
+        <div >
+          
+          <p class="text-sm text-cyan-300 flex items-end"><span class="fleur">Yasin</span><img class="w-10 mx-auto" src="assets/logo.png" alt=""><span  class="fleur">Creation</span></p>
         </div>
         <div>
             <ul class="font-medium flex gap-10">
                 <a href="#Home"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Home</li></a>
-                <a href="#"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Service</li></a>
                 <a href="#About"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">About</li></a>
+                <a href="#skill"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Skill</li></a>
                 <a href="#project"> <li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Project</li></a>
+                <a href="#service"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Service</li></a>
                 <a href="#contact"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">contact</li></a>
             </ul>
              
@@ -46,13 +59,15 @@ html {
      </nav>
      <!-- banner -->
       <div id="Home"></div>
-     <section  class="max-w-5xl mx-auto mt-32 pb-32">
+     <section  class="max-w-3xl mx-auto mt-32 pb-32">
         <div class="flex justify-between items-center">
             <div class="text-center">
               <p class="font-bold text-2xl">Hi,I'm  <span class="font-black text-4xl text-[#38BDF8]">MD Yasin,</span><br>
                <span class="font-black text-3xl text-[#38BDF8]">Frontend Web Developer</span> and<br> <span class="font-black text-3xl text-[#38BDF8]"> Digital Marketer</span></p>
                <p class="mt-5">specializing in web development and <br> digital marketing strategies.</p>
-               <button class="bg-[#38BDF8] py-2 px-3 rounded-2xl text-sm hover:bg-[#0284C7] transition duration-300 ease-in-out mt-5 ">contact me</button>
+             <a href="#contact">
+                <button class="bg-[#38BDF8] py-2 px-3 rounded-2xl text-sm hover:bg-[#0284C7] transition duration-300 ease-in-out mt-5 cursor-pointer ">contact me</button>
+             </a>
 
 
             </div>
@@ -72,76 +87,85 @@ html {
         </p>
       </section>
       <!-- skill -->
-       <section class="mt-32">
-        <h1 class="text-[#38BDF8] text-4xl font-bold text-center">Skill</h1>
-            <div class="flex justify-center mt-10 gap-5">
-                <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">Font-end web development</button>
-                <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">Digital Marketer</button>
+       <div id="skill">
+
+       </div>
+       <div class="mt-32 ">
+        <h1 class="text-[#38BDF8] text-4xl font-bold text-center ">Skill</h1>
+        <div class="flex justify-center mt-10 gap-5 sticky top-0">
+            <button id="skill-btn1" class=" skill-btn text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Digital Marketer</button>
+            <button id="skill-btn2" class=" skill-btn text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Font-end web development</button>
+        </div>
+        <!-- skill of digital marketing -->
+        <section id="skill-digital" class="grid grid-cols-3 gap-5 max-w-3xl mx-auto mt-10">
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 mx-auto rounded-lg" src="assets/seo.png" alt="">
+                <p class="text-center text-sm mt-5 mb-5">(Search Engine Optimization)</p>
+
+                <p class=" text-center">1.Off-Page-SEO</p>
+                <p class=" text-center">2.On-Page-SEO</p>
+                <p class=" text-center">3.keyword research</p>
+                <p class=" text-center">4.technical SEO</p>
             </div>
-            <!-- skill of digital marketing -->
-            <section class="grid grid-cols-3 gap-5 max-w-3xl mx-auto mt-10">
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 mx-auto rounded-lg" src="assets/seo.png" alt="">
-                    <p class="text-center text-sm mt-5 mb-5">(Search Engine Optimization)</p>
-
-                    <p class=" text-center">1.Off-Page-SEO</p>
-                    <p class=" text-center">2.On-Page-SEO</p>
-                    <p class=" text-center">3.keyword research</p>
-                    <p class=" text-center">4.technical SEO</p>
-                </div>
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 mx-auto rounded-lg" src="assets/sem.png" alt="">
-                    <p class="text-center text-sm mt-5 mb-5">(Search Engine Marketing)</p>
-                    <p class=" text-center">1.Paid Search Ads (PPC)</p>
-                    <p class=" text-center">2.SEO (Search Engine Optimization)</p>
-                    
-                </div>
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 mx-auto rounded-lg" src="assets/ppc.png" alt="">
-                    <p class="text-center text-sm mt-5 mb-5">(Pay-Per-Click)</p>
-                    
-                    <p class=" text-center">1.Google Ads {Search,<br> Display,<br> YouTube}</p>
-                    
-                </div>
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 mx-auto rounded-lg" src="assets/email.jpg" alt="">
-                    <p class="text-center text-sm mt-5 mb-5">(Email marketing)</p>
-                    <p class=" text-center">1.Email Automations</p>
-                    <p class=" text-center">2.Email Platform Support</p>
-                    <p class=" text-center">3.Campaign Management</p>
-                    <p class=" text-center">4.Audience Development</p>
-                    <p class=" text-center">5.Cold Emails</p>
-                </div>
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 mx-auto rounded-lg" src="assets/sem.png" alt="">
+                <p class="text-center text-sm mt-5 mb-5">(Search Engine Marketing)</p>
+                <p class=" text-center">1.Paid Search Ads (PPC)</p>
+                <p class=" text-center">2.SEO (Search Engine Optimization)</p>
                 
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 mx-auto rounded-lg" src="assets/management.png" alt="">
-                    <p class="text-center text-sm mt-5 mb-5">(Social Media Management)</p>
-                    
-                    <p class=" text-center">1.facebook</p>
-                    <p class=" text-center">2.instagram</p>
-                    <p class=" text-center">3.twitter</p>
-                    <p class=" text-center">4.linkedin</p>
-                </div>
-            </section>
-            <!-- skill of wev development -->
-             <section class="grid grid-cols-3 max-w-3xl mx-auto gap-5 mt-10">
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 rounded-lg mx-auto" src="assets/html.png" alt="">
-                    <p class="text-sm mt-5 mb-5 text-center">(HyperText Markup Language)</p>
-                    <p class="text-center">HTML is the core language for structuring web pages. With HTML, I can create the proper structure and markup, which displays the website's content and layout correctly.</p>
-                </div>
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 rounded-lg mx-auto" src="assets/css.png" alt="">
-                    <p class="text-sm mt-5 mb-5 text-center">(Cascading Style Sheets)</p>
-                    <p class="text-center">HTML is the core language for structuring web pages. With HTML, I can create the proper structure and markup, which displays the website's content and layout correctly.</p>
-                </div>
-                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
-                    <img class="w-28 rounded-lg mx-auto" src="assets/tailwind.jpg" alt="">
-                    <p class="text-center mt-5">HTML is the core language for structuring web pages. With HTML, I can create the proper structure and markup, which displays the website's content and layout correctly.</p>
-                </div>
-             </section>
+            </div>
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 mx-auto rounded-lg" src="assets/ppc.png" alt="">
+                <p class="text-center text-sm mt-5 mb-5">(Pay-Per-Click)</p>
+                
+                <p class=" text-center">1.Google Ads {Search,<br> Display,<br> YouTube}</p>
+                
+            </div>
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 mx-auto rounded-lg" src="assets/email.jpg" alt="">
+                <p class="text-center text-sm mt-5 mb-5">(Email marketing)</p>
+                <p class=" text-center">1.Email Automations</p>
+                <p class=" text-center">2.Email Platform Support</p>
+                <p class=" text-center">3.Campaign Management</p>
+                <p class=" text-center">4.Audience Development</p>
+                <p class=" text-center">5.Cold Emails</p>
+            </div>
+            
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 mx-auto rounded-lg" src="assets/management.png" alt="">
+                <p class="text-center text-sm mt-5 mb-5">(Social Media Management)</p>
+                
+                <p class=" text-center">1.facebook</p>
+                <p class=" text-center">2.instagram</p>
+                <p class=" text-center">3.twitter</p>
+                <p class=" text-center">4.linkedin</p>
+            </div>
+        </section>
+        <!-- skill of wev development -->
+         <section id="skill-web" class=" hidden  grid-cols-3 max-w-3xl mx-auto gap-5 mt-10">
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 rounded-lg mx-auto" src="assets/html.png" alt="">
+                <p class="text-center mt-10 font-bold text-2xl">HTML</p>
+                <p class="text-sm mt-2 mb-5 text-center">(HyperText Markup Language)</p>
+                <p class="text-center">HTML is the foundation of web development. I can write clean and SEO-friendly markup that structures a website and presents content effectively.</p>
+            </div>
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 rounded-lg mx-auto" src="assets/css.png" alt="">
+                <p class="text-center mt-10 font-bold text-2xl">CSS</p>
+                <p class="text-sm mt-2 mb-5 text-center">(Cascading Style Sheets)</p>
+                <p class="text-center">With CSS, I can design websites, create layouts, and add animations. I am skilled in responsive design and modern UI development.</p>
+            </div>
+            <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                <img class="w-28 rounded-lg mx-auto" src="assets/tailwind.jpg" alt="">
+                <p class="text-center mt-10 font-bold text-2xl">Tailwind css</p>
+                <p class="text-center mt-5">Using Tailwind CSS, I can quickly build responsive web designs. With its utility-first classes, I can create customized and optimized styling efficiently.</p>
+            </div>
+         </section>
 
-       </section>
+       </div>
+
+        
+ 
 
        <!-- project -->
         <div id="project">
@@ -149,18 +173,18 @@ html {
         </div>
         <section  class="mt-32">
             <h1 class="font-bold text-5xl text-center text-[#38BDF8] ">Project</h1>
-            <div class="flex justify-center mt-10 gap-5">
-                <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">Font-end web development</button>
-                <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">Digital Marketer</button>
+            <div class="flex justify-center mt-10  gap-5">
+                <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Font-end web development</button>
+                <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Digital Marketer</button>
             </div>
             <!-- digital marketing -->
              <section>
                 <div class="flex justify-center mt-10 gap-5">
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">All</button>
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">SEO</button>
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">SEM</button>
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">PPC</button>
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">Email marketing</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">All</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">SEO</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">SEM</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">PPC</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Email marketing</button>
                    
 
                 </div>
@@ -168,32 +192,111 @@ html {
              <!-- development -->
               <section>
                 <div class="flex justify-center mt-10 gap-5">
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">All</button>
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">html-css</button>
-                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out ">html-tailwind</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">All</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">html-css</button>
+                    <button class="text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">html-tailwind</button>
                 </div>
               </section>
         </section>
+        <!-- service -->
+         <div id="service"></div>
+         <section class="mt-32">
+            <h1 class="text-center text-5xl font-bold text-[#38BDF8]">Service</h1>
+            <div class="flex sticky top-0 justify-center mt-10 
+             gap-5">
+             <button id="service-btn1" class=" service-btn text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Digital Marketer</button>
+                <button id="service-btn2" class=" service-btn text-sm py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] transition duration-300 ease-in-out cursor-pointer">Font-end web development</button>
+            </div>
+            <!-- digital marketing -->
+            <section id="service-digital" class="grid grid-cols-1 gap-5 max-w-3xl mx-auto mt-10">
+                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                    <img class="w-28 mx-auto rounded-lg" src="assets/seo.png" alt="">
+                    <p class="text-center text-sm mt-5 mb-5">(Search Engine Optimization)</p>
+
+                    <p class=" text-center flex items-center justify-center gap-2"><i class="text-xl fa-solid fa-circle-check"></i>  On-Page SEO (Meta Tags, Content Optimization, Internal Linking)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Off-Page SEO (Backlinks, Guest Posting, Outreach)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Keyword Research (Competitive & Long-Tail Keywords)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Technical SEO (Site Speed, Schema Markup, Mobile Optimization)</p>
+                </div>
+                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                    <img class="w-28 mx-auto rounded-lg" src="assets/sem.png" alt="">
+                    <p class="text-center text-sm mt-5 mb-5">(Search Engine Marketing)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Facebook & Instagram Ads (Lead Generation, Engagement, Conversion)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Google Ads (Search, Display, YouTube)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  LinkedIn Ads (B2B Lead Generation, Brand Awareness)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Twitter Ads (Promoted Tweets, Brand Reach)</p>
+                    
+                </div>
+                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                    <img class="w-28 mx-auto rounded-lg" src="assets/ppc.png" alt="">
+                    <p class="text-center text-sm mt-5 mb-5">(Pay-Per-Click)</p>
+                    
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i> Google Ads {Search,<br> Display,<br> YouTube}</p>
+                    
+                </div>
+                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                    <img class="w-28 mx-auto rounded-lg" src="assets/email.jpg" alt="">
+                    <p class="text-center text-sm mt-5 mb-5">(Email marketing)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Email Automations & Drip Campaigns</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Email Platform Support (Mailchimp, ConvertKit, ActiveCampaign)</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Cold Email Outreach & Audience Development</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Campaign Management & Performance Tracking</p>
+                </div>
+                
+                <div class="p-5 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                    <img class="w-28 mx-auto rounded-lg" src="assets/management.png" alt="">
+                    <p class="text-center text-sm mt-5 mb-5">(Social Media Management)</p>
+                    
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Facebook, Instagram, Twitter, LinkedIn Management</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Content Creation & Scheduling</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Engagement & Community Building</p>
+                    <p class=" text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Analytics & Performance Reporting</p>
+                </div>
+            </section>
+            <!-- web development -->
+            <section id="service-web" class=" hidden grid-cols-1 max-w-3xl mx-auto gap-5 mt-10">
+                <div class="p-10 rounded-lg shadow-lg transition duration-300 ease-in-out hover:bg-[#0284C7] bg-[#1E293B]">
+                    <div class="flex justify-center mb-10 gap-10">
+                        <img class="w-28 h-28 rounded-lg " src="assets/html.png" alt="">
+                        <img class="w-28 h-28 rounded-lg " src="assets/css.png" alt="">
+                        <img class="w-28 h-28 rounded-lg " src="assets/tailwind.jpg" alt="">
+                    </div>
+                
+                    <p class="text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Responsive Website Design (HTML, CSS, Tailwind CSS)</p>
+                    <p class="text-center"> <i class="text-xl fa-solid fa-circle-check"></i>   Custom Landing Page Development</p>
+                    <p class="text-center"><i class="text-xl fa-solid fa-circle-check"></i>   Website Redesign & UI Improvement</p>
+                    <p class="text-center"><i class="text-xl fa-solid fa-circle-check"></i>  Speed Optimization & Mobile-Friendly Design</p>
+                </div>
+                
+             </section>
+         </section>
         <!-- contact form -->
          <div id="contact">
 
          </div>
          <section class="mt-32 max-w-3xl mx-auto  ">
-            <form class="flex flex-col space-y-5">
+            <h1 class="text-center font-bold text-[#38BDF8] text-5xl mb-10">contact me</h1>
+            <form  class="flex flex-col space-y-5">
                 <input  class="py-2 rounded-md  bg-[#1E293B] border-none pl-5" type="text" placeholder="enter your name" required>
                 <input  class="py-2 rounded-md  bg-[#1E293B] border-none pl-5" type="email" placeholder="enter your email" required>
-                <textarea  rows="10" cols="50" class="pl-5   bg-[#1E293B] border-none"  name="" placeholder="write description..........." id=""></textarea>
-                <button class="py-2 px-3 rounded-2xl bg-[#38BDF8] hover:bg-[#0284C7] w-32 mx-auto">submit</button>
+                <textarea  rows="10" cols="50" class="pl-5   bg-[#1E293B] border-none"  name="" placeholder="write description..........." id="" required></textarea>
+        
+                <button  class="py-2 px-3 rounded-2xl  bg-[#38BDF8] hover:bg-[#0284C7] w-32 mx-auto cursor-pointer">submit</button>
+
             </form>
          </section>
          <footer class="bg-[#1E293B] mt-32 pt-10">
-            <div class="max-w-2xl mx-auto flex justify-between mb-10">
+            <div class="max-w-4xl mx-auto flex justify-between mb-10">
+                <div >
+          
+                    <p class="text-sm text-cyan-300 flex items-end"><span class="fleur">Yasin</span> <img class="w-16 mx-auto" src="assets/footer.png" alt=""><span class="fleur">Creation</span></p>
+                  </div>
                 <div>
                     <ul class="font-medium ">
                         <a href="#Home"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Home</li></a>
-                        <a href="#"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Service</li></a>
                         <a href="#About"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">About</li></a>
                         <a href="#project"> <li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Project</li></a>
+                        <a href="#service"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">Service</li></a>
                         <a href="#contact"><li class="hover:text-[#38BDF8] transition duration-300 ease-in-out">contact</li></a>
                     </ul>
                 </div>
@@ -210,5 +313,6 @@ html {
             </div>
           <p class="text-center ">© 2025 MD Yasin. All Rights Reserved.</p>
          </footer>
+         <script src="js/script.js"></script>
 </body>
 </html>
